@@ -1,0 +1,106 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+  }
+  
+  body {
+    background: #000;
+    color: #fff;
+    line-height: 1.6;
+  }
+  video {
+    object-fit: fill;
+}
+  /* Navbar */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background: #111;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .navbar .logo {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .navbar ul {
+    list-style: none;
+    display: flex;
+  }
+  
+  .navbar ul li {
+    margin: 0 20px;
+  }
+  
+  .navbar ul li a {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s;
+  }
+  
+  /* Hover effect */
+  .navbar ul li:hover a {
+    color: #ccc;
+  }
+  
+  /* Hero Section */
+.hero {
+    width: 100vw; /* Full width of the viewport */
+    height: calc(100vh - 100px); /* Height just before the gallery */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #222;
+    overflow: hidden;
+  }
+  
+  .video-placeholder {
+    width: 100%;
+    height: 100%;
+    background: #444;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    color: #fff;
+  }
+  .videot {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the video covers the entire section */
+  }
+  /* Fashion Photo Section */
+  .gallery {
+    padding: 50px;
+  }
+  
+  .photo-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  
+  .photo {
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #333;
+    transition: transform 0.3s, background 0.3s;
+    cursor: pointer;
+  }
+  
+  /* Hover effect on photos */
+  .photo:hover {
+    transform: scale(1.05);
+    background: #555;
+  }
+  
