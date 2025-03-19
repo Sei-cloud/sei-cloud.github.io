@@ -1,21 +1,19 @@
 /* General Styles */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: sans-serif;
-  }
-  
-  body {
-    background: #000;
-    color: #fff;
-    line-height: 1.6;
-  }
-  video {
-    object-fit: fill;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
 }
-  /* Navbar */
-  .navbar {
+
+body {
+  background: #000;
+  color: #fff;
+  line-height: 1.6;
+}
+
+/* Navbar Styling */
+.navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -29,6 +27,7 @@
   .navbar .logo {
     font-size: 24px;
     font-weight: bold;
+    color: #fff;
   }
   
   .navbar ul {
@@ -37,6 +36,7 @@
   }
   
   .navbar ul li {
+    position: relative;
     margin: 0 20px;
   }
   
@@ -44,63 +44,129 @@
     text-decoration: none;
     color: #fff;
     transition: color 0.3s;
+    padding: 10px 15px;
   }
   
-  /* Hover effect */
+  /* Hover effect for navbar */
   .navbar ul li:hover a {
     color: #ccc;
   }
   
-  /* Hero Section */
-.hero {
-    width: 100vw; /* Full width of the viewport */
-    height: calc(100vh - 100px); /* Height just before the gallery */
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  /* Dropdown menu */
+  .dropdown {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 40px;
     background: #222;
-    overflow: hidden;
+    border-radius: 5px;
+    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.1);
+    z-index: 999;
+    opacity: 0; 
+    visibility: hidden; 
+    transition: visibility 0.3s ease;
+  
+    /* Display items in a row */
+    display: flex; 
+    flex-direction: row; 
+    white-space: nowrap; /* Prevent wrapping */
+    min-width: max-content; /* Ensure enough width for all items */
   }
   
-  .video-placeholder {
-    width: 100%;
-    height: 100%;
-    background: #444;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 24px;
+  .dropdown li {
+    display: block; 
+    margin: 0; 
+  }
+  
+  .dropdown li a {
+    display: block;
+    padding: 10px 15px;
     color: #fff;
-  }
-  .videot {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Ensure the video covers the entire section */
-  }
-  /* Fashion Photo Section */
-  .gallery {
-    padding: 50px;
+    transition: background 0.3s;
   }
   
-  .photo-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+  .dropdown li:hover a {
+    background: #444;
   }
   
-  .photo {
-    height: 300px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #333;
-    transition: transform 0.3s, background 0.3s;
-    cursor: pointer;
+  /* Show dropdown on hover */
+  .navbar ul li:hover .dropdown {
+    display: block;
+    opacity: 1; 
+    visibility: visible;
   }
   
-  /* Hover effect on photos */
-  .photo:hover {
-    transform: scale(1.05);
-    background: #555;
-  }
   
+
+/* Hero Section */
+.hero {
+  width: 100vw; /* Full width of the viewport */
+  height: calc(100vh - 100px); /* Height just before the gallery */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #222;
+  overflow: hidden;
+}
+
+/* Video Style */
+.video-placeholder {
+  width: 100%;
+  height: 100%;
+  background: #444;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  color: #fff;
+}
+.videot {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure the video covers the entire section */
+}
+
+/* Fashion Photo Section */
+.gallery {
+  padding: 50px;
+  background: #000;
+}
+
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.photo {
+  position: relative;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #333;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s;
+  cursor: pointer;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Photo inside the placeholder */
+.photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+/* Hover effect: Enlarge the image with the same size as the placeholder */
+.photo:hover img {
+  transform: scale(1.05); /* Slight enlargement */
+}
+
+.photo:hover {
+  box-shadow: 0 10px 20px rgba(255, 255, 255, 0.1);
+}
