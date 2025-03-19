@@ -10,6 +10,7 @@ body {
   background: #000;
   color: #fff;
   line-height: 1.6;
+  overflow-x: hidden;
 }
 
 /* Navbar Styling */
@@ -169,4 +170,54 @@ body {
 
 .photo:hover {
   box-shadow: 0 10px 20px rgba(255, 255, 255, 0.1);
+}
+
+
+
+
+/* Footer Styling */
+.footer {
+  background: #111;
+  color: #fff;
+  padding: 40px 0;
+  text-align: center;
+  border-top: 1px solid #444;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: center;
+  gap: 50px; /* Space between items */
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 18px;
+}
+
+.footer-item span {
+  font-size: 22px;
+}
+
+.footer-item a {
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-item a:hover {
+  color: #fff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    gap: 20px;
+  }
 }
