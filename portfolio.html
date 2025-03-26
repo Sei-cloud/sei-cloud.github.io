@@ -1,0 +1,287 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="./public/assets/styles/style.css" />
+    <link rel="stylesheet" href="./public/assets/styles/portfolio.css" />
+    <!-- Bootstrap CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black">
+      <div class="container-fluid">
+        <!-- Logo -->
+        <a class="navbar-brand" href="/index.html">
+          <img
+            src="public/assets/images/logo.png"
+            alt="Sedo Biba Logo"
+            class="logo"
+          />
+        </a>
+
+        <!-- Hamburger Menu -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navigation Links -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="/index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/portfolio.html">Portfolio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Portfolio Section -->
+    <section class="portfolio">
+      <div class="container">
+        <h1 class="text-center mb-5">Portfolio</h1>
+
+        <!-- Collection 1 -->
+        <div class="collection">
+          <div class="row">
+            <!-- Main Image -->
+            <div class="col-lg-6 d-flex align-items-stretch main-img-container">
+              <img
+                src="./public/assets/images/img-1.png"
+                alt="Collection 1"
+                class="img-fluid rounded shadow main-img"
+              />
+            </div>
+
+            <!-- Content Section -->
+            <div class="col-lg-6 d-flex flex-column">
+              <!-- Description -->
+              <div class="collection-desc p-4">
+                <h2>Collection 1</h2>
+                <p>
+                  A brief description of the concept behind the collection. How
+                  it's made, what materials used, what is the inspiration etc.
+                </p>
+              </div>
+              <!-- Collection Gallery -->
+              <div class="collection-gallery d-flex justify-content-between">
+                <img
+                  src="./public/assets/images/img-2.png"
+                  alt="Gallery 1"
+                  class="img-fluid rounded shadow"
+                  data-fullscreen
+                />
+                <img
+                  src="./public/assets/images/bag.png"
+                  alt="Gallery 2"
+                  class="img-fluid rounded shadow"
+                  data-fullscreen
+                />
+                <img
+                  src="./public/assets/images/glasses.png"
+                  alt="Gallery 3"
+                  class="img-fluid rounded shadow"
+                  data-fullscreen
+                />
+              </div>
+            </div>
+            <!-- Fullscreen Viewer -->
+            <div id="fullscreen-viewer" class="fullscreen-viewer">
+              <span class="close-btn">&times;</span>
+              <img id="fullscreen-img" src="" alt="Fullscreen View" />
+            </div>
+          </div>
+
+          <div class="photo-grid-portfolio">
+            <div class="photo-portfolio">
+              <img
+                src="./public/assets/images/img-2.png"
+                alt="Editorial Shot"
+                data-fullscreen
+              />
+            </div>
+            <div class="photo-portfolio">
+              <img src="./public/assets/images/img-1.png" 
+              alt="Runway Shot" 
+              data-fullscreen
+              />
+              
+            </div>
+            <div class="photo-portfolio">
+              <img src="./public/assets/images/bag.png" 
+              alt="Bag Design" 
+              data-fullscreen
+              />
+            </div>
+            <div class="photo-portfolio">
+              <img
+                src="./public/assets/images/glasses.png"
+                alt="Glasses Design"
+                data-fullscreen
+              />
+            </div>
+          </div>
+        </div>
+
+        <hr class="my-5 line" />
+
+        <!-- Collection 2 -->
+        <div class="collection">
+          <div class="row align-items-center flex-lg-row-reverse">
+            <div class="col-lg-6">
+              <img
+                src="./public/assets/images/collection2.jpg"
+                alt="Collection 2"
+                class="img-fluid rounded shadow"
+              />
+            </div>
+            <div class="col-lg-6">
+              <h2 class="collection-title">Avant-Garde Minimalism</h2>
+              <p class="collection-desc">
+                A sleek collection focusing on clean lines and futuristic
+                silhouettes. Black and white contrast with subtle metallic
+                accents for a sharp, modern edge.
+              </p>
+              <div class="collection-gallery d-flex">
+                <img
+                  src="./public/assets/images/collection2-detail1.jpg"
+                  alt="Detail 1"
+                  class="img-fluid detail-img"
+                />
+                <img
+                  src="./public/assets/images/collection2-detail2.jpg"
+                  alt="Detail 2"
+                  class="img-fluid detail-img"
+                />
+                <img
+                  src="./public/assets/images/collection2-detail3.jpg"
+                  alt="Detail 3"
+                  class="img-fluid detail-img"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <hr class="my-5 line" />
+
+        <!-- Collection 3 -->
+        <div class="collection">
+          <div class="row align-items-center">
+            <div class="col-lg-6">
+              <img
+                src="./public/assets/images/collection3.jpg"
+                alt="Collection 3"
+                class="img-fluid rounded shadow"
+              />
+            </div>
+            <div class="col-lg-6">
+              <h2 class="collection-title">Ethereal Romance</h2>
+              <p class="collection-desc">
+                Delicate chiffon, soft pastels, and intricate lacework define
+                this dreamy collection. Perfect for evening wear and special
+                occasions, it embodies grace and femininity.
+              </p>
+              <div class="collection-gallery d-flex">
+                <img
+                  src="./public/assets/images/collection3-detail1.jpg"
+                  alt="Detail 1"
+                  class="img-fluid detail-img"
+                />
+                <img
+                  src="./public/assets/images/collection3-detail2.jpg"
+                  alt="Detail 2"
+                  class="img-fluid detail-img"
+                />
+                <img
+                  src="./public/assets/images/collection3-detail3.jpg"
+                  alt="Detail 3"
+                  class="img-fluid detail-img"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer bg-black text-white text-center py-4">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 mb-3">
+            <span>📞</span>
+            <a href="tel:+1234567890" class="text-white text-decoration-none"
+              >+1 (773) 431-4236</a
+            >
+          </div>
+          <div class="col-md-4 mb-3">
+            <span>📧</span>
+            <a
+              href="mailto:sedobiba@gmail.com"
+              class="text-white text-decoration-none"
+              >sedobiba@gmail.com</a
+            >
+          </div>
+          <div class="col-md-4 mb-3">
+            <span>📷</span>
+            <a
+              href="https://www.instagram.com/sedo_biba"
+              target="_blank"
+              class="text-white text-decoration-none"
+              >Instagram</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Select all gallery images
+        const images = document.querySelectorAll("[data-fullscreen]");
+        const viewer = document.getElementById("fullscreen-viewer");
+        const fullscreenImg = document.getElementById("fullscreen-img");
+        const closeBtn = document.querySelector(".close-btn");
+  
+        // Open fullscreen image on click
+        images.forEach((img) => {
+          img.addEventListener("click", () => {
+            fullscreenImg.src =
+              img.tagName === "IMG" ? img.src : img.querySelector("img").src;
+            viewer.style.display = "flex";
+            document.body.style.overflow = "hidden"; // Disable scrolling when image is fullscreen
+          });
+        });
+  
+        // Close fullscreen viewer
+        closeBtn.addEventListener("click", () => {
+          viewer.style.display = "none";
+          document.body.style.overflow = "auto"; // Enable scrolling again
+        });
+  
+        // Close on clicking outside the image
+        viewer.addEventListener("click", (e) => {
+          if (e.target !== fullscreenImg) {
+            viewer.style.display = "none";
+            document.body.style.overflow = "auto";
+          }
+        });
+      </script>
+  </body>
+</html>
