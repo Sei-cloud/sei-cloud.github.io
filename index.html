@@ -15,7 +15,7 @@
     <header></header>
     <!-- Hero Section -->
     <section class="hero">
-      <div class="video-placeholder">
+      
         <video class="videot" loop autoplay muted>
           <source src="./public/assets/fashion.mp4" type="video/mp4" />
           Your browser does not support the video tag.
@@ -25,7 +25,7 @@
           <p>Catchphrase #2</p>
           <a href="/portfolio.html" class="cta-button">Explore Portfolio</a>
         </div>
-      </div>
+   
     </section>
 
     <!-- Introduction Section -->
@@ -35,21 +35,26 @@
         <p>Designed for those who dare to be different.</p>
       </div>
     </section>
-
+    <!-- Fullscreen Viewer -->
+    <div id="fullscreen-viewer" class="fullscreen-viewer">
+      <span class="close-btn">&times;</span>
+      <img id="fullscreen-img" src="" alt="Fullscreen View" />
+    </div>
+  </div>
     <!-- Fashion Photos Section -->
     <section class="gallery">
       <div class="photo-grid">
         <div class="photo">
-          <img src="./public/assets/images/img-2.png" alt="Editorial Shot" />
+          <img src="./public/assets/images/img-2.png" alt="Editorial Shot" data-fullscreen />
         </div>
         <div class="photo">
-          <img src="./public/assets/images/img-1.png" alt="Runway Shot" />
+          <img src="./public/assets/images/img-1.png" alt="Runway Shot" data-fullscreen/>
         </div>
         <div class="photo">
-          <img src="./public/assets/images/bag.png" alt="Bag Design" />
+          <img src="./public/assets/images/bag.png" alt="Bag Design" data-fullscreen/>
         </div>
         <div class="photo">
-          <img src="./public/assets/images/glasses.png" alt="Glasses Design" />
+          <img src="./public/assets/images/glasses.png" alt="Glasses Design" data-fullscreen/>
         </div>
       </div>
     </section>
