@@ -19,10 +19,11 @@ html, body {
   top: 0;
   left: 0;
   z-index: 1000;
-  height: 70px;
+  min-height: 70px;
   display: flex;
-  justify-content: space-between;
+ 
   padding: 10px 5%;
+  background: #fff;
 }
 .navbar-nav .nav-link {
   margin: 0 40px;  /* Add horizontal space between nav links */
@@ -31,13 +32,11 @@ html, body {
 }
 
 .logo {
-  width: auto;
-  height: 150px;
-  transition: transform 0.3s;
-}
-
-.logo:hover {
-  transform: scale(1.1);
+  height: 20px; /* Adjust height to make it fit nicely */
+  display: block; /* removes inline gap */
+  object-fit: contain;
+  padding: 0;
+  margin: 0;
 }
 
 .nav-link {
@@ -47,6 +46,7 @@ html, body {
 
 .nav-link:hover {
   color: #f04e30 !important;
+  text-decoration: underline;
 }
 
   
@@ -106,7 +106,7 @@ html, body {
 }
 
 .cta-button:hover {
-  background: #e0432d;
+  background: #e6331c;
 }
 
 /* Video Style */
@@ -221,45 +221,4 @@ html, body {
 
 .footer-item a:hover {
   color: #fff;
-}
-
-/* Mobile Responsive Design */
-@media (max-width: 1024px) {
-  .navbar {
-    flex-direction: column;
-    height: auto;
-  }
-
-  .logo img {
-    width: auto;
-    max-height: 50px;    /* Slightly smaller logo on tablets */
-  }
-
-  .navbar nav ul {
-    flex-direction: column;
-    align-items: center;
-  }
-
-
-}
-
-@media (max-width: 768px) {
-  .logo img {
-    width: auto;
-    max-height: 50px;    /* Smaller logo for mobile */
-  }
-}
-
-@media (max-width: 480px) {
-  .logo img {
-    max-height: 50px;    /* Compact logo size for smaller screens */
-  }
-
-  .navbar {
-    padding: 10px;
-  }
-
-  .navbar nav ul li a {
-    padding: 6px 10px;   /* Reduced link padding for smaller screens */
-  }
 }

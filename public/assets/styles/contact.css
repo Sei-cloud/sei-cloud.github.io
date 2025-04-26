@@ -1,0 +1,151 @@
+.contact-section {
+  background-color: #0d0d0d;
+  width: 100vw;
+  min-height: 100vh;
+  padding: 60px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+}
+
+.contact-info {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+  margin-top: 4rem;
+}
+
+.info-box {
+  text-align: center;
+}
+
+.info-box i {
+  font-size: 40px;
+  color: #d4a95f;
+  margin-bottom: 10px;
+}
+
+.info-box h4 {
+  margin-top: 10px;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.info-box p {
+  font-size: 15px;
+  line-height: 1.5;
+  color: #ccc;
+}
+
+.contact-form-container {
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+}
+
+.contact-form-container h2 {
+  margin-bottom: 30px;
+  font-size: 26px;
+}
+
+.input-group {
+  margin-bottom: 20px;
+}
+
+.input-group input,
+.input-group textarea {
+  width: 100%;
+  padding: 12px 15px;
+  background-color: #111;
+  border: none;
+  border-bottom: 2px solid #333;
+  color: #fff;
+  font-size: 16px;
+  border-radius: 6px;
+  resize: none;
+}
+
+.input-group input::placeholder,
+.input-group textarea::placeholder {
+  color: #777;
+}
+
+.send-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #d4a95f;
+  color: #000;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.download-resume {
+  display: block;
+  margin-top: 20px;
+  color: #d4a95f;
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .contact-info {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .info-box i {
+    font-size: 30px; /* smaller icons */
+  }
+
+  .info-box h4 {
+    font-size: 18px; /* smaller heading */
+  }
+
+  .info-box p {
+    font-size: 14px; /* smaller text */
+  }
+
+  .contact-form-container h2 {
+    font-size: 22px; /* smaller title */
+  }
+
+  .contact-form-container {
+    max-width: 90%;
+  }
+
+  .send-btn {
+    font-size: 14px;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .info-box i {
+    font-size: 24px; /* even smaller icons for tiny phones */
+  }
+
+  .info-box h4 {
+    font-size: 16px;
+  }
+
+  .info-box p {
+    font-size: 13px;
+  }
+
+  .contact-form-container h2 {
+    font-size: 20px;
+  }
+
+  .send-btn {
+    font-size: 13px;
+    padding: 10px;
+  }
+}
