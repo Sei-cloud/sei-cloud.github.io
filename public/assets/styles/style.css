@@ -19,11 +19,7 @@ html, body {
   top: 0;
   left: 0;
   z-index: 1000;
-  min-height: 70px;
   display: flex;
- 
-  padding: 10px 5%;
-  background: #fff;
 }
 .navbar-nav .nav-link {
   margin: 0 40px;  /* Add horizontal space between nav links */
@@ -32,8 +28,8 @@ html, body {
 }
 
 .logo {
-  height: 20px; /* Adjust height to make it fit nicely */
-  display: block; /* removes inline gap */
+  height: 20px; 
+  display: block; 
   object-fit: contain;
   padding: 0;
   margin: 0;

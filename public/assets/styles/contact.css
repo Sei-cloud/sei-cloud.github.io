@@ -85,7 +85,10 @@
   cursor: pointer;
   margin-top: 10px;
 }
-
+.send-btn:hover {
+  background-color: #b78d44; 
+  transition: background-color 0.3s
+}
 .download-resume {
   display: block;
   margin-top: 20px;
