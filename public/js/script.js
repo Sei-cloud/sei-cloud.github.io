@@ -66,6 +66,9 @@ const galleryImages = document.querySelectorAll('.gallery-img');
           });
         });
       
+
+
+        // Fullscreen modal for lookbook
         function showModal(src) {
           modal.style.display = 'flex';
           modalImg.src = src;

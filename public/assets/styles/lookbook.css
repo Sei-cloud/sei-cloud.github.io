@@ -1,3 +1,6 @@
+.lookbook {
+  background: #000;
+}
 .outfit {
   display: flex;
   flex-direction: column;
@@ -12,9 +15,10 @@
   width: 100%;
   display: block;
 }
+
 /* Line divider */
 .line {
-  border-color: #444;
+  border-color: #b8b7b7;
 }
 
 .thumbnails {
