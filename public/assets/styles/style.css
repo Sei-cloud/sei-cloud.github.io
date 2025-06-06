@@ -1,9 +1,12 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 /* General Styles */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: sans-serif;
+  font-family: "Montserrat", "Roboto Mono", sans-serif;
 }
 
 html, body {
@@ -14,36 +17,64 @@ html, body {
   text-align: center;
 }
 
-/* Navbar Styling */
-.navbar {
-  top: 0;
-  left: 0;
-  z-index: 1000;
-  display: flex;
-}
-.navbar-nav .nav-link {
-  margin: 0 40px;  /* Add horizontal space between nav links */
-  font-size: 18px;
-  transition: color 0.3s;
-}
-
-.logo {
-  height: 20px; 
-  display: block; 
-  object-fit: contain;
-  padding: 0;
-  margin: 0;
-}
-
 .nav-link {
   font-size: 18px;
   transition: color 0.3s;
 }
 
 .nav-link:hover {
-  color: #f04e30 !important;
+  color: #c21010 !important;
   text-decoration: underline;
 }
+
+.navbar {
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  margin-right: 180px;
+}
+
+.navbar-nav .nav-link {
+  margin: 0 40px;
+  font-size: 18px;
+  transition: color 0.3s;
+}
+
+.logo {
+  height: 40px;
+  display: flex;
+  object-fit: contain;
+  padding: 0;
+  margin: 0; 
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    margin-right: 0;
+  }
+
+  .logo {
+    justify-content: center;
+    align-items: center;
+    margin: auto 0; 
+  }
+
+  .navbar-nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar-nav .nav-link {
+    margin: 10px 0;
+  }
+}
+
 
   
   
@@ -59,7 +90,7 @@ html, body {
   overflow: hidden;
 } */
 
-.video-placeholder {
+/* .video-placeholder {
   position: relative;
   width: 100%;
   overflow: hidden;
@@ -118,7 +149,7 @@ html, body {
     font-size: 14px;
     padding: 8px 16px;
   }
-}
+} */
 
 .dark {
   background-color: #000;
@@ -150,6 +181,9 @@ html, body {
 
   .intro p {
     font-size: 1rem;
+    .logo {
+      justify-content: center;
+    }
   }
   
 }
