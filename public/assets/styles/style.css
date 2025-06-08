@@ -58,7 +58,7 @@ html, body {
   }
 }
 /* Mobile layout adjustments */
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   .navbar {
     position: relative;
     padding: 0.5rem 1rem;
