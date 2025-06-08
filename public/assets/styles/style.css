@@ -50,21 +50,48 @@ html, body {
   display: flex;
   object-fit: contain;
   padding: 0;
-  margin-right: -180px; 
+  margin-right: -135px; 
 }
-
-/* Mobile styles */
+@media (max-width: 1110px) {
+  .logo {
+    margin: -10px
+  }
+}
+/* Mobile layout adjustments */
 @media (max-width: 768px) {
   .navbar {
-    flex-direction: column;
-    margin-right: 0;
+    position: relative;
+    padding: 0.5rem 1rem;
   }
 
-  .logo {
-    justify-content: center;
+  .container-fluid {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
-    margin: auto 0; 
   }
+
+  .navbar-brand {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+  }
+
+  .navbar-toggler {
+    z-index: 3;
+  }
+
+  .centered-logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 12px;
+    z-index: 10;
+  }
+
+
 
   .navbar-nav {
     flex-direction: column;
@@ -74,7 +101,14 @@ html, body {
   .navbar-nav .nav-link {
     margin: 10px 0;
   }
+
+  .logo {
+    margin: -14px 0 0 0;
+    
+  }
 }
+
+
 
 
   
