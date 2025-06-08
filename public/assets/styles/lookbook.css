@@ -6,7 +6,6 @@
   flex-direction: column;
   background: #111;
   margin-bottom: 40px;
-  border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 4px 12px rgba(255, 255, 255, 0.05);
 }
@@ -32,7 +31,6 @@
 
 .thumbnails img {
   height: 180px;
-  border-radius: 6px;
   cursor: pointer;
   transition: transform 0.3s ease;
 }
@@ -58,7 +56,6 @@
     max-width: 100%; /* Prevent overflow */
     height: auto; /* Maintain aspect ratio */
     object-fit: cover;
-    border-radius: 6px;
   }
 }
 .description {
