@@ -1,10 +1,10 @@
 /* Portfolio Styling */
-.portfolio {
+.portfolio-main {
   padding: 80px 0;
   background: #000;
 }
 
-.portfolio h1 {
+.portfolio-main h1 {
   font-size: 48px;
   font-weight: bold;
   color: #fff;
@@ -48,6 +48,7 @@
 
 .credit a{
   color: #ccc;
+  text-decoration: none;
 }
 
 .credit a:hover {
@@ -151,12 +152,12 @@ img[data-fullscreen]:hover {
 }
 
 /* Portfolio Styling */
-.portfolio {
+.portfolio-main {
   padding: 80px 0;
   background: #000;
 }
 
-.portfolio h1 {
+.portfolio-main h1 {
   font-size: 48px;
   font-weight: bold;
   color: #fff;
@@ -274,4 +275,65 @@ img[data-fullscreen]:hover {
   .collection-desc {
     font-size: 16px;
   }
+}
+
+
+
+
+
+/* Modal styles */
+.fullscreen-modal {
+  display: none; /* hidden by default */
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.9);
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 9999;
+  gap: 1rem;
+  padding: 1rem;
+}
+.fullscreen-modal.active {
+  display: flex;
+}
+#modalMainImg {
+  max-width: 80vw;
+  max-height: 70vh;
+  border-radius: 8px;
+  box-shadow: 0 0 20px white;
+}
+.thumbnail-row {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  max-width: 90vw;
+}
+.thumbnail-row img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border: 3px solid transparent;
+  border-radius: 6px;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: border-color 0.3s ease;
+}
+.thumbnail-row img.active {
+  border-color: white;
+}
+.close-collection {
+  position: fixed;
+  top: 20px;
+  right: 30px;
+  font-size: 3rem;
+  color: white;
+  cursor: pointer;
+  user-select: none;
+  font-weight: bold;
+  background: transparent;
+  border: none;
+  line-height: 1;
 }
