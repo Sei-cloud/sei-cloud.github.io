@@ -3,12 +3,40 @@ document.addEventListener("DOMContentLoaded", () => {
     const modalMainImg = document.getElementById("modalMainImg");
     const thumbnailRow = document.querySelector(".thumbnail-row");
     const closeBtn = modal.querySelector(".close-collection");
+    function scrollThumbnailIntoView(activeThumb) {
+        const container = thumbnailRow;
+        const containerRect = container.getBoundingClientRect();
+        const thumbRect = activeThumb.getBoundingClientRect();
+      
+        if (thumbRect.left < containerRect.left) {
+          // Scroll left to show thumbnail
+          container.scrollBy({ left: thumbRect.left - containerRect.left - 10, behavior: 'smooth' });
+        } else if (thumbRect.right > containerRect.right) {
+          // Scroll right to show thumbnail
+          container.scrollBy({ left: thumbRect.right - containerRect.right + 10, behavior: 'smooth' });
+        }
+      }
   
     const collections = {
       dreamweaver: [
         "https://res.cloudinary.com/dpo4wcevn/image/upload/v1749365452/SEDOBIBA_ROGELIO9.5_od4pay.jpg",
         "https://res.cloudinary.com/dpo4wcevn/image/upload/v1749365439/5.0_k3cp3t.jpg",
-        "https://res.cloudinary.com/dpo4wcevn/image/upload/v1749365440/7.0_ucuiix.jpg"
+        "https://res.cloudinary.com/dpo4wcevn/image/upload/v1749365440/7.0_ucuiix.jpg",
+        "https://res.cloudinary.com/dpo4wcevn/image/upload/v1749365452/SEDOBIBA_ROGELIO9.5_od4pay.jpg",
+        "https://res.cloudinary.com/dpo4wcevn/image/upload/v1749365439/5.0_k3cp3t.jpg",
+        "https://res.cloudinary.com/dpo4wcevn/image/upload/v1749365440/7.0_ucuiix.jpg",
+        "https://res.cloudinary.com/dpo4wcevn/image/upload/v1749365452/SEDOBIBA_ROGELIO9.5_od4pay.jpg",
+        "https://res.cloudinary.com/dpo4wcevn/image/upload/v1749365439/5.0_k3cp3t.jpg",
+        "https://res.cloudinary.com/dpo4wcevn/image/upload/v1749365440/7.0_ucuiix.jpg",
+        "https://res.cloudinary.com/dpo4wcevn/image/upload/v1749365452/SEDOBIBA_ROGELIO9.5_od4pay.jpg",
+        "https://res.cloudinary.com/dpo4wcevn/image/upload/v1749365439/5.0_k3cp3t.jpg",
+        "https://res.cloudinary.com/dpo4wcevn/image/upload/v1749365440/7.0_ucuiix.jpg",
+        "https://res.cloudinary.com/dpo4wcevn/image/upload/v1749365452/SEDOBIBA_ROGELIO9.5_od4pay.jpg",
+        "https://res.cloudinary.com/dpo4wcevn/image/upload/v1749365439/5.0_k3cp3t.jpg",
+        "https://res.cloudinary.com/dpo4wcevn/image/upload/v1749365440/7.0_ucuiix.jpg",
+        "https://res.cloudinary.com/dpo4wcevn/image/upload/v1749365452/SEDOBIBA_ROGELIO9.5_od4pay.jpg",
+        "https://res.cloudinary.com/dpo4wcevn/image/upload/v1749365439/5.0_k3cp3t.jpg",
+        "https://res.cloudinary.com/dpo4wcevn/image/upload/v1749365440/7.0_ucuiix.jpg",
       ]
     };
   
@@ -16,17 +44,23 @@ document.addEventListener("DOMContentLoaded", () => {
     let currentImages = [];
   
     function showImage(index) {
-      if (!currentImages.length) return;
-      currentIndex = (index + currentImages.length) % currentImages.length; // loop around
-      modalMainImg.classList.remove("fade-in");
-      void modalMainImg.offsetWidth; // trigger reflow for restart
-      modalMainImg.src = currentImages[currentIndex];
-      modalMainImg.classList.add("fade-in");
-  
-      document.querySelectorAll(".thumbnail-row img").forEach((img, i) => {
-        img.classList.toggle("active", i === currentIndex);
-      });
-    }
+        if (!currentImages.length) return;
+        currentIndex = (index + currentImages.length) % currentImages.length; // loop around
+        modalMainImg.classList.remove("fade-in");
+        void modalMainImg.offsetWidth; // trigger reflow for restart
+        modalMainImg.src = currentImages[currentIndex];
+        modalMainImg.classList.add("fade-in");
+      
+        const thumbnails = document.querySelectorAll(".thumbnail-row img");
+        thumbnails.forEach((img, i) => {
+          img.classList.toggle("active", i === currentIndex);
+        });
+      
+        // Scroll active thumbnail into view
+        const activeThumb = thumbnails[currentIndex];
+        if (activeThumb) scrollThumbnailIntoView(activeThumb);
+      }
+      
   
     document.querySelectorAll(".see-full-collection-btn button").forEach((btn) => {
       btn.addEventListener("click", () => {

@@ -372,6 +372,12 @@ img[data-fullscreen]:hover {
 .right-arrow {
   right: 30px;
 }
+@media (max-width: 768px) {
+  .nav-arrow {
+    display: none;
+  }
+}
+
 
 /* Slide left animation */
 #modalMainImg.slide-left {
@@ -384,3 +390,95 @@ img[data-fullscreen]:hover {
   transform: translateX(50%);
   opacity: 0;
 }
+
+
+
+
+/* Portfolio Title smaller font on smaller devices */
+@media (max-width: 768px) {
+  .portfolio-main h1 {
+    font-size: 32px;
+  }
+
+  .collection-title {
+    font-size: 24px;
+  }
+
+  .collection-desc {
+    font-size: 16px;
+  }
+
+  /* Thumbnail size smaller for better fit on mobile */
+  .thumbnail-row img {
+    width: 60px;
+    height: 60px;
+  }
+
+  /* Modal main image max size for smaller screens */
+  #modalMainImg {
+    max-width: 90vw;
+    max-height: 50vh;
+  }
+
+  /* Adjust modal padding and gap */
+  .fullscreen-modal {
+    padding: 0.5rem;
+    gap: 0.5rem;
+  }
+}
+
+/* For very small devices */
+@media (max-width: 480px) {
+  .collection-gallery img,
+  .detail-img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+  }
+
+  .collection-gallery {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Thumbnails scroll horizontally */
+  .thumbnail-row {
+    max-width: 100vw;
+    padding-bottom: 10px;
+  }
+
+  /* Close button size adjustment */
+  .close-collection {
+    top: 10px;
+    right: 10px;
+    font-size: 2.5rem;
+  }
+}
+
+/* Show nav arrows on mobile but smaller & less intrusive */
+@media (max-width: 768px) {
+  .nav-arrow {
+    display: block;
+    font-size: 2rem;
+    padding: 0.3rem 0.6rem;
+    background: rgba(255, 255, 255, 0.15);
+  }
+
+  .left-arrow {
+    left: 10px;
+  }
+
+  .right-arrow {
+    right: 10px;
+  }
+}
+
+/* Fix photo grid for tablets & smaller screens */
+@media (max-width: 992px) {
+  .photo-grid-portfolio {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 15px;
+  }
+}
+
+
