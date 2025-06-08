@@ -315,7 +315,7 @@ html, body {
 .footer {
   background: #111;
   color: #fff;
-  padding: 40px 0;
+  padding: 0;
   text-align: center;
   border-top: 1px solid #444;
 }
@@ -323,21 +323,14 @@ html, body {
 .footer-container {
   display: flex;
   justify-content: center;
-  gap: 50px; /* Space between items */
   align-items: center;
   max-width: 1200px;
   margin: 0 auto;
 }
 
-.footer-item {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-size: 18px;
-}
 
-.footer-item span {
-  font-size: 22px;
+p {
+  font-size: 14px;
 }
 
 .footer-item a {
