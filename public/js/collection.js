@@ -25,48 +25,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const collections = {
     dreamweaver: [
-      "https://res.cloudinary.com/dpo4wcevn/image/upload/v1749365475/SEDOBIBA_ROGELIO35_mlosfm.jpg",
-      "https://res.cloudinary.com/dpo4wcevn/image/upload/v1749365476/SEDOBIBA_ROGELIO36_nygldq.jpg",
-      "https://res.cloudinary.com/dpo4wcevn/image/upload/v1749365474/SEDOBIBA_ROGELIO34_vv6jvh.jpg",
-      "https://res.cloudinary.com/dpo4wcevn/image/upload/v1749365473/SEDOBIBA_ROGELIO33_vmuzms.jpg",
-      "https://res.cloudinary.com/dpo4wcevn/image/upload/v1749365472/SEDOBIBA_ROGELIO31_a36h8q.jpg",
-
-      "https://res.cloudinary.com/dpo4wcevn/image/upload/v1749365466/SEDOBIBA_ROGELIO25_ygcx3n.jpg",
-      "https://res.cloudinary.com/dpo4wcevn/image/upload/v1749365470/SEDOBIBA_ROGELIO30_dsnkh1.jpg",
-      "https://res.cloudinary.com/dpo4wcevn/image/upload/v1749365469/SEDOBIBA_ROGELIO28_fyp8vi.jpg",
-      "https://res.cloudinary.com/dpo4wcevn/image/upload/v1749365469/SEDOBIBA_ROGELIO29_hizzt8.jpg",
-      "https://res.cloudinary.com/dpo4wcevn/image/upload/v1749365468/SEDOBIBA_ROGELIO27_swmpvd.jpg",
-      "https://res.cloudinary.com/dpo4wcevn/image/upload/v1749365467/SEDOBIBA_ROGELIO26_jdb2mv.jpg",
-
-      "https://res.cloudinary.com/dpo4wcevn/image/upload/v1749365462/SEDOBIBA_ROGELIO20_uppiuj.jpg",
-      "https://res.cloudinary.com/dpo4wcevn/image/upload/v1749365464/SEDOBIBA_ROGELIO23_tfhgnq.jpg",
-      "https://res.cloudinary.com/dpo4wcevn/image/upload/v1749365465/SEDOBIBA_ROGELIO24_fz2xdd.jpg",
-      "https://res.cloudinary.com/dpo4wcevn/image/upload/v1749365464/SEDOBIBA_ROGELIO22_p4fear.jpg",
-      "https://res.cloudinary.com/dpo4wcevn/image/upload/v1749365463/SEDOBIBA_ROGELIO21_bi6w4e.jpg",
-
-      "https://res.cloudinary.com/dpo4wcevn/image/upload/v1749365458/SEDOBIBA_ROGELIO15_ueycr4.jpg",
-      "https://res.cloudinary.com/dpo4wcevn/image/upload/v1749365459/SEDOBIBA_ROGELIO16_pzdddr.jpg",
-      "https://res.cloudinary.com/dpo4wcevn/image/upload/v1749365461/SEDOBIBA_ROGELIO19_kyaduq.jpg",
-      "https://res.cloudinary.com/dpo4wcevn/image/upload/v1749365459/SEDOBIBA_ROGELIO17_nz8nt1.jpg",
-      "https://res.cloudinary.com/dpo4wcevn/image/upload/v1749365460/SEDOBIBA_ROGELIO18_ontsrp.jpg",
-
-      "https://res.cloudinary.com/dpo4wcevn/image/upload/v1749365455/SEDOBIBA_ROGELIO12_pkrlsk.jpg",
-      "https://res.cloudinary.com/dpo4wcevn/image/upload/v1749365455/SEDOBIBA_ROGELIO11_etdmn3.jpg",
-      "https://res.cloudinary.com/dpo4wcevn/image/upload/v1749365457/SEDOBIBA_ROGELIO14_xjand2.jpg",
-      "https://res.cloudinary.com/dpo4wcevn/image/upload/v1749365456/SEDOBIBA_ROGELIO13_e45kna.jpg",
-
-      "https://res.cloudinary.com/dpo4wcevn/image/upload/v1749365451/SEDOBIBA_ROGELIO7_lzgihl.jpg",
-      "https://res.cloudinary.com/dpo4wcevn/image/upload/v1749365450/SEDOBIBA_ROGELIO6_aiuwfi.jpg",
-      "https://res.cloudinary.com/dpo4wcevn/image/upload/v1749365451/SEDOBIBA_ROGELIO8_tmf6wo.jpg",
-      "https://res.cloudinary.com/dpo4wcevn/image/upload/v1749365453/SEDOBIBA_ROGELIO9_cbdbcr.jpg",
-      "https://res.cloudinary.com/dpo4wcevn/image/upload/v1749365454/SEDOBIBA_ROGELIO10_co9asc.jpg",
-
-      "https://res.cloudinary.com/dpo4wcevn/image/upload/v1749365448/SEDOBIBA_ROGELIO2_hwlxtb.jpg",
-      "https://res.cloudinary.com/dpo4wcevn/image/upload/v1749365449/SEDOBIBA_ROGELIO5_efgt5r.jpg",
-      "https://res.cloudinary.com/dpo4wcevn/image/upload/v1749365449/SEDOBIBA_ROGELIO4_fgws1w.jpg",
-      "https://res.cloudinary.com/dpo4wcevn/image/upload/v1749365447/SEDOBIBA_ROGELIO1_skma6m.jpg",
-      "https://res.cloudinary.com/dpo4wcevn/image/upload/v1749365448/SEDOBIBA_ROGELIO3_u4ayni.jpg",
-
       "https://res.cloudinary.com/dpo4wcevn/image/upload/v1749365438/4.0_hazqzg.jpg",
       "https://res.cloudinary.com/dpo4wcevn/image/upload/v1749365437/3.0_rft3oy.jpg",
       "https://res.cloudinary.com/dpo4wcevn/image/upload/v1749365436/2.0_sk8wq3.jpg",

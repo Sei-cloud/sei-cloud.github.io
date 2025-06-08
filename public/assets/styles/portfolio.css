@@ -191,8 +191,6 @@ img[data-fullscreen]:hover {
 #modalMainImg {
   max-width: 80vw;
   max-height: 70vh;
-  border-radius: 8px;
-  box-shadow: 0 0 20px white;
 }
 .thumbnail-row {
   display: flex;
@@ -231,7 +229,6 @@ img[data-fullscreen]:hover {
   max-width: 80vw;
   max-height: 70vh;
   border-radius: 8px;
-  box-shadow: 0 0 20px white;
   transition: transform 0.4s ease, opacity 0.4s ease;
   opacity: 1;
 }
