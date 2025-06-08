@@ -259,7 +259,7 @@ html, body {
 }
 @media (max-width: 768px) {
   .gallery {
-    padding: 0;
+    padding: 0 0 50px 0;
   }
 }
 /* Hover effect: Enlarge the image with the same size as the placeholder */
