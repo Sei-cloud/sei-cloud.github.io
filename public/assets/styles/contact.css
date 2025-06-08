@@ -98,11 +98,11 @@
 } */
 
 @media (max-width: 768px) {
-  .contact-info {
+  /* .contact-info {
     flex-direction: column;
     align-items: center;
     gap: 30px;
-  }
+  } */
 
   .info-box i {
     font-size: 30px; /* smaller icons */
