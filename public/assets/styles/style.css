@@ -224,7 +224,7 @@ html, body {
 }
 /* Fashion Photo Section */
 .gallery {
-  padding: 50px;
+  padding: 0 0 50px 0;;
   background: #000;
 }
 
@@ -257,11 +257,7 @@ html, body {
   object-fit: cover;
   transition: transform 0.3s ease;
 }
-@media (max-width: 768px) {
-  .gallery {
-    padding: 0 0 50px 0;
-  }
-}
+
 /* Hover effect: Enlarge the image with the same size as the placeholder */
 .photo:hover img {
   cursor: pointer;
