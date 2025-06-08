@@ -37,7 +37,33 @@ document.addEventListener("DOMContentLoaded", () => {
         "https://res.cloudinary.com/dpo4wcevn/image/upload/v1749365452/SEDOBIBA_ROGELIO9.5_od4pay.jpg",
         "https://res.cloudinary.com/dpo4wcevn/image/upload/v1749365439/5.0_k3cp3t.jpg",
         "https://res.cloudinary.com/dpo4wcevn/image/upload/v1749365440/7.0_ucuiix.jpg",
-      ]
+      ],
+
+      SaintsAndShadows: [
+          "https://res.cloudinary.com/dpo4wcevn/image/upload/v1749367742/SteiningerC_SedoPortfolio-Web-14_w8bcbw.jpg",
+          "https://res.cloudinary.com/dpo4wcevn/image/upload/v1749367742/SteiningerC_SedoPortfolio-Web-14_w8bcbw.jpg",
+          "https://res.cloudinary.com/dpo4wcevn/image/upload/v1749367742/SteiningerC_SedoPortfolio-Web-14_w8bcbw.jpg",
+          "https://res.cloudinary.com/dpo4wcevn/image/upload/v1749367742/SteiningerC_SedoPortfolio-Web-14_w8bcbw.jpg",
+          "https://res.cloudinary.com/dpo4wcevn/image/upload/v1749367742/SteiningerC_SedoPortfolio-Web-14_w8bcbw.jpg",
+          "https://res.cloudinary.com/dpo4wcevn/image/upload/v1749367742/SteiningerC_SedoPortfolio-Web-14_w8bcbw.jpg",
+          "https://res.cloudinary.com/dpo4wcevn/image/upload/v1749367742/SteiningerC_SedoPortfolio-Web-14_w8bcbw.jpg",
+          "https://res.cloudinary.com/dpo4wcevn/image/upload/v1749367742/SteiningerC_SedoPortfolio-Web-14_w8bcbw.jpg",
+          "https://res.cloudinary.com/dpo4wcevn/image/upload/v1749367742/SteiningerC_SedoPortfolio-Web-14_w8bcbw.jpg",
+          "https://res.cloudinary.com/dpo4wcevn/image/upload/v1749367742/SteiningerC_SedoPortfolio-Web-14_w8bcbw.jpg",
+          "https://res.cloudinary.com/dpo4wcevn/image/upload/v1749367742/SteiningerC_SedoPortfolio-Web-14_w8bcbw.jpg",
+          "https://res.cloudinary.com/dpo4wcevn/image/upload/v1749367742/SteiningerC_SedoPortfolio-Web-14_w8bcbw.jpg",
+          "https://res.cloudinary.com/dpo4wcevn/image/upload/v1749367742/SteiningerC_SedoPortfolio-Web-14_w8bcbw.jpg",
+          "https://res.cloudinary.com/dpo4wcevn/image/upload/v1749367742/SteiningerC_SedoPortfolio-Web-14_w8bcbw.jpg",
+          "https://res.cloudinary.com/dpo4wcevn/image/upload/v1749367742/SteiningerC_SedoPortfolio-Web-14_w8bcbw.jpg",
+          "https://res.cloudinary.com/dpo4wcevn/image/upload/v1749367742/SteiningerC_SedoPortfolio-Web-14_w8bcbw.jpg",
+          "https://res.cloudinary.com/dpo4wcevn/image/upload/v1749367742/SteiningerC_SedoPortfolio-Web-14_w8bcbw.jpg",
+          "https://res.cloudinary.com/dpo4wcevn/image/upload/v1749367742/SteiningerC_SedoPortfolio-Web-14_w8bcbw.jpg",
+          "https://res.cloudinary.com/dpo4wcevn/image/upload/v1749367742/SteiningerC_SedoPortfolio-Web-14_w8bcbw.jpg",
+    ],
+
+    myrtleBroadway: [
+        "https://res.cloudinary.com/dpo4wcevn/image/upload/v1749370681/compressed-66360022_gihvvr.jpg",
+    ]
     };
   
     let currentIndex = 0;
