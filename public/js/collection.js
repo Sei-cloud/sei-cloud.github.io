@@ -3,73 +3,91 @@ document.addEventListener("DOMContentLoaded", () => {
     const modalMainImg = document.getElementById("modalMainImg");
     const thumbnailRow = document.querySelector(".thumbnail-row");
     const closeBtn = modal.querySelector(".close-collection");
-
-    // Image collections
+  
     const collections = {
       dreamweaver: [
         "https://res.cloudinary.com/dpo4wcevn/image/upload/v1749365452/SEDOBIBA_ROGELIO9.5_od4pay.jpg",
         "https://res.cloudinary.com/dpo4wcevn/image/upload/v1749365439/5.0_k3cp3t.jpg",
-        "https://res.cloudinary.com/dpo4wcevn/image/upload/v1749365440/7.0_ucuiix.jpg",
-      ],
+        "https://res.cloudinary.com/dpo4wcevn/image/upload/v1749365440/7.0_ucuiix.jpg"
+      ]
     };
-
+  
+    let currentIndex = 0;
+    let currentImages = [];
+  
+    function showImage(index) {
+      if (!currentImages.length) return;
+      currentIndex = (index + currentImages.length) % currentImages.length; // loop around
+      modalMainImg.classList.remove("fade-in");
+      void modalMainImg.offsetWidth; // trigger reflow for restart
+      modalMainImg.src = currentImages[currentIndex];
+      modalMainImg.classList.add("fade-in");
+  
+      document.querySelectorAll(".thumbnail-row img").forEach((img, i) => {
+        img.classList.toggle("active", i === currentIndex);
+      });
+    }
+  
     document.querySelectorAll(".see-full-collection-btn button").forEach((btn) => {
       btn.addEventListener("click", () => {
         const collectionEl = btn.closest(".collection");
-        if (!collectionEl) return;
-
         const collectionId = collectionEl.dataset.collectionId;
-        const images = collections[collectionId];
-        if (!images) return;
-
-        // Clear previous
+        currentImages = collections[collectionId] || [];
+        if (!currentImages.length) return;
+  
         thumbnailRow.innerHTML = "";
-        modalMainImg.src = images[0];
-        modalMainImg.alt = `Image 1 of ${collectionId} collection`;
-
-        // Create thumbnails
-        images.forEach((src, index) => {
+        currentImages.forEach((src, index) => {
           const thumb = document.createElement("img");
           thumb.src = src;
-          thumb.alt = `Thumbnail ${index + 1} of ${collectionId}`;
           if (index === 0) thumb.classList.add("active");
-
-          thumb.addEventListener("click", () => {
-            modalMainImg.src = src;
-            modalMainImg.alt = `Image ${index + 1} of ${collectionId} collection`;
-            document.querySelectorAll(".thumbnail-row img").forEach(i => i.classList.remove("active"));
-            thumb.classList.add("active");
-          });
-
+          thumb.addEventListener("click", () => showImage(index));
           thumbnailRow.appendChild(thumb);
         });
-
+  
+        showImage(0);
         modal.classList.add("active");
       });
     });
-
-    // Close modal on click close button
-    closeBtn.addEventListener("click", () => {
+  
+    closeBtn.addEventListener("click", closeModal);
+    modal.addEventListener("click", (e) => {
+      if (e.target === modal) closeModal();
+    });
+  
+    function closeModal() {
       modal.classList.remove("active");
       modalMainImg.src = "";
       thumbnailRow.innerHTML = "";
-    });
-
-    // Optional: Close modal on clicking outside the image
-    modal.addEventListener("click", (e) => {
-      if (e.target === modal) {
-        modal.classList.remove("active");
-        modalMainImg.src = "";
-        thumbnailRow.innerHTML = "";
-      }
-    });
-
-    // Optional: Close modal on Esc key press
+      currentImages = [];
+    }
+    const leftArrow = document.querySelector(".left-arrow");
+    const rightArrow = document.querySelector(".right-arrow");
+    
+    leftArrow.addEventListener("click", () => showImage(currentIndex - 1, -1));
+    rightArrow.addEventListener("click", () => showImage(currentIndex + 1, 1));
+    
+    // ← → arrow key navigation
     document.addEventListener("keydown", (e) => {
-      if (e.key === "Escape" && modal.classList.contains("active")) {
-        modal.classList.remove("active");
-        modalMainImg.src = "";
-        thumbnailRow.innerHTML = "";
+      if (!modal.classList.contains("active")) return;
+      if (e.key === "ArrowRight") showImage(currentIndex + 1);
+      if (e.key === "ArrowLeft") showImage(currentIndex - 1);
+      if (e.key === "Escape") closeModal();
+    });
+    
+    // Touch swipe support
+    let startX = 0;
+    modal.addEventListener("touchstart", (e) => {
+      startX = e.touches[0].clientX;
+    });
+  
+    modal.addEventListener("touchend", (e) => {
+      const endX = e.changedTouches[0].clientX;
+      const delta = endX - startX;
+  
+      if (Math.abs(delta) > 50) {
+        if (delta < 0) showImage(currentIndex + 1); // swipe left
+        else showImage(currentIndex - 1); // swipe right
       }
     });
   });
+  
