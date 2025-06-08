@@ -46,6 +46,14 @@
   margin-bottom: 30px;
 }
 
+.credit a{
+  color: #ccc;
+}
+
+.credit a:hover {
+  color: #fff;
+}
+
 /* Collection Gallery (thumbnails) */
 .collection-gallery {
   display: flex;

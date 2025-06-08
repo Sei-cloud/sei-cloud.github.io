@@ -1,8 +1,8 @@
 // Load header and footer
 function loadHTML(selector, url) {
   fetch(url)
-    .then(response => response.text())
-    .then(data => {
+    .then((response) => response.text())
+    .then((data) => {
       document.querySelector(selector).innerHTML = data;
     });
 }
@@ -46,46 +46,54 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+const galleryImages = document.querySelectorAll(".gallery-img");
+const modal = document.getElementById("gallery-modal");
+const modalImg = document.getElementById("modal-img");
+const closeBtn = document.querySelector(".close-btn");
+const leftArrow = document.querySelector(".left-arrow");
+const rightArrow = document.querySelector(".right-arrow");
 
-const galleryImages = document.querySelectorAll('.gallery-img');
-        const modal = document.getElementById('gallery-modal');
-        const modalImg = document.getElementById('modal-img');
-        const closeBtn = document.querySelector('.close-btn');
-        const leftArrow = document.querySelector('.left-arrow');
-        const rightArrow = document.querySelector('.right-arrow');
-      
-        let currentGroup = [];
-        let currentIndex = 0;
-      
-        galleryImages.forEach(img => {
-          img.addEventListener('click', (e) => {
-            const groupName = e.target.dataset.group;
-            currentGroup = Array.from(document.querySelectorAll(`.gallery-img[data-group="${groupName}"]`));
-            currentIndex = currentGroup.findIndex(i => i.dataset.src === e.target.dataset.src);
-            showModal(currentGroup[currentIndex].dataset.src);
-          });
-        });
-      
+let currentGroup = [];
+let currentIndex = 0;
 
+galleryImages.forEach((img) => {
+  img.addEventListener("click", (e) => {
+    const groupName = e.target.dataset.group;
+    currentGroup = Array.from(
+      document.querySelectorAll(`.gallery-img[data-group="${groupName}"]`)
+    );
+    currentIndex = currentGroup.findIndex(
+      (i) => i.dataset.src === e.target.dataset.src
+    );
+    showModal(currentGroup[currentIndex].dataset.src);
+  });
+});
 
-        // Fullscreen modal for lookbook
-        function showModal(src) {
-          modal.style.display = 'flex';
-          modalImg.src = src;
-        }
-      
-        function changeImage(step) {
-          currentIndex = (currentIndex + step + currentGroup.length) % currentGroup.length;
-          modalImg.src = currentGroup[currentIndex].dataset.src;
-        }
-      
-        closeBtn.onclick = () => modal.style.display = 'none';
-        leftArrow.onclick = () => changeImage(-1);
-        rightArrow.onclick = () => changeImage(1);
-      
-        document.addEventListener('keydown', (e) => {
-          if (!modal.style.display.includes('flex')) return;
-          if (e.key === 'Escape') modal.style.display = 'none';
-          if (e.key === 'ArrowLeft') changeImage(-1);
-          if (e.key === 'ArrowRight') changeImage(1);
-        });
+// Fullscreen modal for lookbook
+function showModal(src) {
+  modal.style.display = "flex";
+  modalImg.src = src;
+}
+
+function changeImage(step) {
+  currentIndex =
+    (currentIndex + step + currentGroup.length) % currentGroup.length;
+  modalImg.src = currentGroup[currentIndex].dataset.src;
+}
+
+closeBtn.onclick = () => (modal.style.display = "none");
+// Close modal when clicking outside the image
+modal.addEventListener("click", (e) => {
+  if (e.target === modal) {
+    modal.style.display = "none";
+  }
+});
+leftArrow.onclick = () => changeImage(-1);
+rightArrow.onclick = () => changeImage(1);
+
+document.addEventListener("keydown", (e) => {
+  if (!modal.style.display.includes("flex")) return;
+  if (e.key === "Escape") modal.style.display = "none";
+  if (e.key === "ArrowLeft") changeImage(-1);
+  if (e.key === "ArrowRight") changeImage(1);
+});
