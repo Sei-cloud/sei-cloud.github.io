@@ -73,9 +73,15 @@ img[data-fullscreen]:hover {
   color: #ccc;
   line-height: 1.8;
   width: 100%;
-  text-align: justify;
+  text-align: left;
   margin-bottom: 30px;
 }
+
+
+/* .credit {
+  margin: 0;
+  padding: 0;
+} */
 
 .credit a{
   color: #9c9c9c;
