@@ -16,8 +16,8 @@ function loadHTML(selector, url) {
     .catch((error) => console.error(`Error loading HTML into ${selector}:`, error));
 }
 
-loadHTML("header", "header.html");
-loadHTML("footer", "footer.html");
+loadHTML("header", "/header.html");
+loadHTML("footer", "/footer.html");
 
 // Fullscreen viewer
 document.addEventListener("DOMContentLoaded", () => {
